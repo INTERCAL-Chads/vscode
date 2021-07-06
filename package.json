@@ -1,0 +1,25 @@
+{
+    "name": "intercal",
+    "displayName": "INTERCAL",
+    "description": "Language support for the Compiler Language With No Pronounceable Acronym (INTERCAL)",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.57.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "intercal",
+            "aliases": ["INTERCAL", "intercal"],
+            "extensions": [".i"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "intercal",
+            "scopeName": "",
+            "path": "./syntaxes/intercal.tmLanguage.json"
+        }]
+    }
+}
