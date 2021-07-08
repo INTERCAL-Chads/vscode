@@ -2,16 +2,56 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "INTERCAL",
 	"patterns": [
-		{
-			"include": "#comments"
-		}
+		{ "include": "#comments" },
+		{ "include": "#keywords" },
+		{ "include": "#operators" },
+		{ "include": "#labels" },
+		{ "include": "#literals" },
+		{ "include": "#variables" }
 	],
 	"repository": {
 		"comments": {
-			"patterns": [{
-				"name": "comment.line.other.intercal",
-				"match": "(DO|PLEASE|PLEASE(N'T| NOT) DO)(N'T| NOT).*"
-			}]
+			"name": "comment.line.other.intercal",
+			"match": "(DO|PLEASE|PLEASE(N'T| NOT) DO)(N'T| NOT).*"
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.intercal",
+					"match": "NEXT|FORGET|RESUME|STASH|RETRIEVE|IGNORE|REMEMBER|ABSTAIN|REINSTATE|GIVE UP|WRITE IN|READ OUT|COME FROM|SUB"
+				}, {
+					"name": "keyword.other.intercal",
+					"match": "PLEASE|DO"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.bitwise.intercal",
+					"match": "\\~|\\&|\\?|\\$|\\bV\\b"
+				},
+				{
+					"name": "keyword.operator.assignment.intercal",
+					"match": "<-"
+				},
+				{
+					"name": "keyword.operator.logical.intercal",
+					"match": "\"|'"
+				}
+			]
+		},
+		"labels": {
+			"name": "entity.name.tag.intercal",
+			"match": "\\(\\d+\\)"
+		},
+		"literals": {
+			"name": "constant.numeric.intercal",
+			"match": "#\\d+"
+		},
+		"variables": {
+			"name": "variable.language.property.intercal",
+			"match": "(\\.|:|,|;)\\d+"
 		}
 	},
 	"scopeName": "source.intercal"
