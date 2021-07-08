@@ -3,30 +3,16 @@
 	"name": "INTERCAL",
 	"patterns": [
 		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
+			"include": "#comments"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"comments": {
 			"patterns": [{
-				"name": "keyword.control.intercal",
-				"match": "\\b(if|while|for|return)\\b"
+				"name": "comment.line.other.intercal",
+				"match": "(DO|PLEASE|PLEASE(N'T| NOT) DO)(N'T| NOT).*"
 			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.intercal",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.intercal",
-					"match": "\\\\."
-				}
-			]
 		}
 	},
-	"scopeName": ""
+	"scopeName": "source.intercal"
 }

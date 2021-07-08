@@ -18,7 +18,7 @@
         }],
         "grammars": [{
             "language": "intercal",
-            "scopeName": "",
+            "scopeName": "source.intercal",
             "path": "./syntaxes/intercal.tmLanguage.json"
         }]
     }
