@@ -2,6 +2,10 @@
     "name": "intercal",
     "displayName": "INTERCAL",
     "description": "Language support for the Compiler Language With No Pronounceable Acronym (INTERCAL)",
+    "publisher": "INTERCAL-Chads",
+    "repository": {
+        "url": "https://github.com/INTERCAL-Chads/vscode"
+    },
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.57.0"
@@ -10,16 +14,28 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "intercal",
-            "aliases": ["INTERCAL", "intercal"],
-            "extensions": [".i"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "intercal",
-            "scopeName": "source.intercal",
-            "path": "./syntaxes/intercal.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "intercal",
+                "aliases": [
+                    "INTERCAL",
+                    "intercal"
+                ],
+                "extensions": [
+                    ".i"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "intercal",
+                "scopeName": "source.intercal",
+                "path": "./syntaxes/intercal.tmLanguage.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "vsce": "^1.95.0"
     }
 }
