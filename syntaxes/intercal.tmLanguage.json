@@ -20,7 +20,7 @@
 					"name": "keyword.control.intercal",
 					"match": "NEXT|FORGET|RESUME|STASH|RETRIEVE|IGNORE|REMEMBER|ABSTAIN|REINSTATE|GIVE UP|WRITE IN|READ OUT|COME FROM|SUB"
 				}, {
-					"name": "keyword.other.intercal",
+					"name": "entity.name.function.intercal",
 					"match": "PLEASE|DO"
 				}
 			]
@@ -29,7 +29,7 @@
 			"patterns": [
 				{
 					"name": "keyword.operator.bitwise.intercal",
-					"match": "\\~|\\&|\\?|\\$|\\bV\\b"
+					"match": "\\~|\\&|\\?|\\$|\\V|\\+"
 				},
 				{
 					"name": "keyword.operator.assignment.intercal",
@@ -47,11 +47,11 @@
 		},
 		"literals": {
 			"name": "constant.numeric.intercal",
-			"match": "#\\d+"
+			"match": "(#\\d+)|(\\d+%)"
 		},
 		"variables": {
 			"name": "variable.language.property.intercal",
-			"match": "(\\.|:|,|;)\\d+"
+			"match": "(\\.|:|,|;|!)\\d+"
 		}
 	},
 	"scopeName": "source.intercal"

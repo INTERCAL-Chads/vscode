@@ -13,6 +13,10 @@
     "categories": [
         "Programming Languages"
     ],
+    "main": "out/main.js",
+    "activationEvents": [
+        "onLanguage:intercal"
+    ],
     "contributes": {
         "languages": [
             {
@@ -36,6 +40,17 @@
         ]
     },
     "devDependencies": {
+        "@types/node": "^16.0.1",
+        "@types/vscode": "^1.57.1",
+        "esbuild": "^0.12.15",
+        "typescript": "^4.3.5",
         "vsce": "^1.95.0"
-    }
+    },
+    "scripts": {
+		"compile": "node ./scripts/build.js",
+		"compile-dev": "node ./scripts/build.js --watch",
+		"vscode:prepublish": "NODE_ENV=production node ./scripts/build.js",
+		"watch": "tsc -watch -p ./",
+		"package": "vsce package"
+	}
 }

@@ -8,3 +8,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Initial release
 - Add basic syntax highlighting to every element in the language
+- Add basic code formatting support
