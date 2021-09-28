@@ -29,6 +29,9 @@ export function activate(context: vscode.ExtensionContext) {
 				// replace `spark-spot`s (`'.`) with `wow`s (`!`)
 				new_line = new_line.replace(/'\s*\./g, '!')
 
+				new_line = new_line.replace(/\$/g, '₪')
+				new_line = new_line.replace(/V/g, '∀')
+				
 				if (new_line !== line.text) {
 					edits.push(vscode.TextEdit.replace(line.range, new_line))
 				}
